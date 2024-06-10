@@ -1,1 +1,56 @@
-<h1>hello This is test app</h1>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="mat-elevation-z10" mode="side">
+    <mat-toolbar class="title-toolbar-menu">
+      <mat-toolbar-row>
+        <span class="title-center">
+          <h2>Menu</h2>
+        </span>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+      <ul>
+        <li><a href="#">Some link</a></li>
+        <li><a href="#">Some link</a></li>
+        <li><a href="#">Some link</a></li>
+        <li><a href="#">Some link</a></li>
+        <li><a href="#">Some link</a></li>
+        <li><a href="#">Some link</a></li>
+        </ul>
+        </mat-sidenav>
+        <!-- </mat-sidenav-container> -->
+<div class="container">
+  <div>
+    <p>
+      <mat-toolbar class="title-toolbar">
+        <mat-toolbar-row>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            (click)="sidenav.toggle()">
+            <mat-icon class="mat-icon">menu</mat-icon>
+          </button>
+          <span class="title-center">
+            <h2>Patient Application</h2>
+          </span>
+          <span class="example-spacer"></span>
+          <button mat-icon-button class="example-icon favorite-icon" (click)="goToLogin()">
+            <mat-icon aria-label="Login or Register">how_to_reg </mat-icon>
+          </button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </p>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="footer">
+    <h3 style="color: white;"> <button mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>call</mat-icon>
+      </button> : 5987461237</h3>
+    <h3 style="color: white;"> <button mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon> email</mat-icon>
+      </button> : evitalrx77gmail.com</h3>
+  </div>
+</div>
